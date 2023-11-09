@@ -1,0 +1,22 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+
+:root {
+  --pre-color: hsl(180, 66%, 49%);
+  --svg-background: hsl(257, 27%, 26%);
+  --secondary-font-color: hsl(0, 0%, 75%);
+}
+body {
+  font-family: "Poppins", sans-serif;
+  font-size: 18px;
+}
+
+.container {
+  margin-left: 15px;
+  margin-right: 15px;
+}
