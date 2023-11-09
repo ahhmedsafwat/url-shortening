@@ -64,28 +64,72 @@ a {
 @media (max-width: 675.98px) {
   .navbar {
     display: none;
+  } /* for the toggle funtion in the main.js  */
+  .showMenu {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--svg-background);
+    border-radius: 6px;
+    align-items: center;
+  }
+  .header .showMenu .menu {
+    display: block;
+    text-align: center;
+    margin: 0;
   }
 }
 
-.header .navbar .menu .menuItem {
+.header .navbar .menu li {
   margin-left: 20px;
-  color: var(--prem-font-color);
-  text-transform: capitalize;
   font-weight: 700;
   font-size: 0.8em;
+}
+.header .navbar .menu li a {
   cursor: pointer;
   transition: 0.3s;
+  color: var(--prem-font-color);
+  text-transform: capitalize;
 }
-
-.header .navbar .menu .menuItem:hover {
+.header .navbar .menu li a:hover {
   color: #232126;
 }
-.header .navbar div {
+.header .navbar ul + div {
   display: flex;
-  align-items: start;
-  position: relative;
+  align-items: center;
 }
 
+@media (max-width: 675.98px) {
+  .header .navbar .menu .menuItem {
+    color: white;
+  }
+
+  .header .navbar .menu li {
+    margin: 0;
+    display: block;
+    margin-bottom: 25px;
+  }
+
+  .header .navbar .menu li:first-child {
+    margin-top: 30px;
+  }
+  .header .navbar ul + div {
+    flex-direction: column;
+    width: 80%;
+    align-items: center;
+    border-top: 1px solid var(--prem-font-color);
+  }
+  .header .navbar div .login {
+    margin: 20px;
+    color: white;
+    text-align: center;
+  }
+  .header .navbar div .signup {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 25px;
+    margin-top: 10px;
+  }
+}
 .header .login {
   padding: 0 15px;
   font-size: 0.8em;
@@ -102,8 +146,6 @@ a {
   font-weight: 700;
   color: white;
   transition: 0.3s;
-  position: absolute;
-  top: -9px;
 }
 .header div .signup:hover {
   opacity: 0.6;
@@ -117,10 +159,9 @@ a {
   .hamburger {
     display: block;
     position: fixed;
-    top: 1.5rem;
-    right: 1rem;
+    top: 1.8rem;
+    right: 1.8em;
     padding: 4px;
-    /* margin: 30px 0 20px 20px; */
     cursor: pointer;
     width: 45px;
     height: 40px;
@@ -152,9 +193,4 @@ a {
   .change #bar3 {
     transform: translateY(-6px) rotateZ(45deg);
   }
-}
-
-/* for the toggle funtion in the main.js  */
-.showMenu {
-  display: block;
 }
