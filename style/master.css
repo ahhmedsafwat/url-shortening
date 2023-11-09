@@ -33,7 +33,7 @@ a {
 }
 @media (max-width: 675.98px) {
   .container {
-    margin: 0;
+    margin: 10px 20px;
   }
 }
 
@@ -44,9 +44,27 @@ a {
   min-height: 100px;
 }
 
+@media (max-width: 675.98px) {
+  .header {
+    padding: 15px;
+    min-height: 25px;
+    display: block;
+  }
+}
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
 .header .navbar .menu {
   display: flex;
   margin-left: 25px;
+}
+@media (max-width: 675.98px) {
+  .navbar {
+    display: none;
+  }
 }
 
 .header .navbar .menu .menuItem {
@@ -62,21 +80,20 @@ a {
 .header .navbar .menu .menuItem:hover {
   color: #232126;
 }
-.header .navbar + div {
+.header .navbar div {
   display: flex;
-  margin-left: auto;
-  height: 20px;
-  align-items: center;
+  align-items: start;
+  position: relative;
 }
 
-.header div .login {
+.header .login {
   padding: 0 15px;
   font-size: 0.8em;
   font-weight: 700;
   color: var(--prem-font-color);
   cursor: pointer;
 }
-.header div .signup {
+.header .signup {
   background: var(--prem-color);
   border-radius: 25px;
   cursor: pointer;
@@ -85,7 +102,59 @@ a {
   font-weight: 700;
   color: white;
   transition: 0.3s;
+  position: absolute;
+  top: -9px;
 }
 .header div .signup:hover {
   opacity: 0.6;
+}
+
+.hamburger {
+  display: none;
+}
+
+@media (max-width: 675.98px) {
+  .hamburger {
+    display: block;
+    position: fixed;
+    top: 1.5rem;
+    right: 1rem;
+    padding: 4px;
+    /* margin: 30px 0 20px 20px; */
+    cursor: pointer;
+    width: 45px;
+    height: 40px;
+  }
+  .bar {
+    height: 5px;
+    width: 100%;
+    background-color: var(--prem-font-color);
+    display: block;
+    border-radius: 5px;
+    transition: 0.3s ease;
+  }
+  #bar1 {
+    transform: translateY(-4px);
+  }
+
+  #bar3 {
+    transform: translateY(4px);
+  }
+  .change {
+    display: block;
+  }
+  .change #bar1 {
+    transform: translateY(4px) rotateZ(-45deg);
+  }
+  .change #bar2 {
+    opacity: 0;
+  }
+  .change #bar3 {
+    transform: translateY(-6px) rotateZ(45deg);
+  }
+}
+
+/* for the toggle funtion in the main.js  */
+.showMenu {
+  display: block;
 }

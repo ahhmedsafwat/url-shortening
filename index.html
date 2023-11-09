@@ -17,6 +17,10 @@
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&display=swap"
       rel="stylesheet"
     />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="style/master.css" />
     <title>Frontend Mentor | Shortly URL shortening API Challenge</title>
 
@@ -39,14 +43,20 @@
         </div>
         <nav class="navbar">
           <ul class="menu">
-            <a class="menuItem" href=""><li>features</li></a>
-            <a class="menuItem" href=""><li>pricing</li></a>
-            <a class="menuItem" href=""><li>resources</li></a>
+            <a class="menuItem toggleItem" href=""><li>features</li></a>
+            <a class="menuItem toggleItem" href=""><li>pricing</li></a>
+            <a class="menuItem toggleItem" href=""><li>resources</li></a>
           </ul>
+          <div>
+            <div class="login toggleItem">login</div>
+            <div class="signup toggleItem">sign up</div>
+          </div>
         </nav>
-        <div>
-          <div class="login">login</div>
-          <div class="signup">sign up</div>
+
+        <div class="hamburger">
+          <div id="bar1" class="bar"></div>
+          <div id="bar2" class="bar"></div>
+          <div id="bar3" class="bar"></div>
         </div>
       </header>
     </div>
@@ -59,5 +69,6 @@
       <a href="https://github.com/ahhmedsafwat" target="_blank">Ahmed Safwat</a
       >.
     </div> -->
+    <script src="main.js"></script>
   </body>
 </html>
