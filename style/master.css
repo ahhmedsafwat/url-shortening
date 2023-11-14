@@ -21,18 +21,20 @@ ul li {
 }
 a {
   text-decoration: none;
+  text-transform: capitalize;
 }
 
-.container {
-  margin: 15px 80px;
+/* start of the header */
+.header {
+  margin: 20px 80px;
 }
 @media (max-width: 767.98px) {
-  .container {
+  .header {
     margin: 10px 40px;
   }
 }
 @media (max-width: 675.98px) {
-  .container {
+  .header {
     margin: 10px 20px;
   }
 }
@@ -95,7 +97,6 @@ a {
 }
 .header .navbar ul + div {
   display: flex;
-  align-items: center;
 }
 
 @media (max-width: 675.98px) {
@@ -131,21 +132,24 @@ a {
   }
 }
 .header .login {
-  padding: 0 15px;
+  padding: 0 20px;
   font-size: 0.8em;
   font-weight: 700;
   color: var(--prem-font-color);
   cursor: pointer;
+  text-transform: capitalize;
 }
 .header .signup {
   background: var(--prem-color);
   border-radius: 25px;
   cursor: pointer;
-  padding: 8px 15px;
+  padding: 8px 20px;
   font-size: 0.8em;
   font-weight: 700;
   color: white;
   transition: 0.3s;
+  margin-top: -10px;
+  text-transform: capitalize;
 }
 .header div .signup:hover {
   opacity: 0.6;
@@ -194,3 +198,48 @@ a {
     transform: translateY(-6px) rotateZ(45deg);
   }
 }
+
+/* end of the header */
+
+/* start hero  */
+.hero {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 60px;
+  align-items: center;
+}
+.hero .content-box {
+  margin-left: 80px;
+  margin-bottom: 50px;
+  text-transform: capitalize;
+}
+
+.hero .content-box h1 {
+  font-size: 4rem;
+  line-height: 1.1;
+  color: hsl(260, 8%, 14%);
+}
+
+.hero .content-box p {
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: var(--prem-font-color);
+  margin-bottom: 30px;
+  line-height: 1.6;
+}
+.hero .content-box a {
+  color: white;
+  background-color: var(--prem-color);
+  border-radius: 25px;
+  padding: 10px 30px;
+  font-weight: 700;
+  font-size: 0.9rem;
+}
+
+/* end of hero  */
+/* start of feature */
+.feature {
+  height: 100vh;
+  background-color: #ddd;
+}
+/* end of feature */
