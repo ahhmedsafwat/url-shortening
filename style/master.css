@@ -100,6 +100,9 @@ a {
 }
 
 @media (max-width: 675.98px) {
+  .header .navbar {
+    z-index: 2;
+  }
   .header .navbar .menu .menuItem {
     color: white;
   }
@@ -152,7 +155,7 @@ a {
   text-transform: capitalize;
 }
 .header div .signup:hover {
-  opacity: 0.6;
+  opacity: 0.7;
 }
 
 .hamburger {
@@ -205,12 +208,18 @@ a {
 .hero {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 60px;
-  align-items: center;
-}
-.hero .content-box {
   margin-left: 80px;
   margin-bottom: 50px;
+  align-items: center;
+}
+@media (max-width: 1199.98px) {
+  .hero {
+    flex-direction: column-reverse;
+    margin-left: 0;
+    margin-bottom: 100px;
+  }
+}
+.hero .content-box {
   text-transform: capitalize;
 }
 
@@ -220,13 +229,22 @@ a {
   color: hsl(260, 8%, 14%);
 }
 
+@media (max-width: 1400px) {
+  .hero .content-box h1 {
+    font-size: 3.8rem;
+    margin-bottom: 20px;
+  }
+}
+
 .hero .content-box p {
   font-size: 1.2rem;
   font-weight: 500;
   color: var(--prem-font-color);
   margin-bottom: 30px;
   line-height: 1.6;
+  width: 477px;
 }
+
 .hero .content-box a {
   color: white;
   background-color: var(--prem-color);
@@ -235,11 +253,70 @@ a {
   font-weight: 700;
   font-size: 0.9rem;
 }
+@media (max-width: 575.98px) {
+  .hero .content-box {
+    text-align: center;
+  }
+  .hero .content-box h1 {
+    font-size: 2rem;
+  }
+  .hero .content-box p {
+    width: fit-content;
+    padding: 0px 15px;
+    font-size: 0.9rem;
+  }
+}
+.hero .content-box a:hover {
+  opacity: 0.7;
+}
+
+.hero .photo-container {
+  position: relative;
+  overflow-x: hidden;
+}
+
+.hero .photo-container img {
+  max-width: 740px;
+  width: 100%;
+  overflow: hidden;
+  display: block;
+  position: relative;
+  left: 80px;
+}
+
+@media (max-width: 1400px) {
+  .hero .photo-container img {
+    width: 580px;
+  }
+}
+@media (max-width: 1199.98px) {
+  .hero .photo-container {
+    overflow-x: visible;
+    margin-bottom: 50px;
+  }
+  .hero .photo-container img {
+    left: 0;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .hero .photo-container img {
+    width: 470px;
+  }
+}
+@media (max-width: 575.98px) {
+  .hero .photo-container {
+    overflow-x: hidden;
+  }
+  .hero .photo-container img {
+    width: 320px;
+  }
+}
 
 /* end of hero  */
 /* start of feature */
 .feature {
-  height: 100vh;
-  background-color: #ddd;
+  height: 200px;
+  background-color: hsl(0, 0%, 75%);
 }
 /* end of feature */
