@@ -12,7 +12,8 @@
   --prem-font-color: hsl(257, 7%, 63%);
   --secondary-font-color: hsl(0, 0%, 75%);
 }
-body {
+body,
+html {
   font-family: "Poppins", sans-serif;
   font-size: 18px;
 }
@@ -25,8 +26,14 @@ a {
 }
 
 /* start of the header */
+
 .header {
   margin: 20px 80px;
+  display: flex;
+  align-items: start;
+  padding: 30px 0;
+  min-height: 100px;
+  position: relative;
 }
 @media (max-width: 767.98px) {
   .header {
@@ -36,19 +43,7 @@ a {
 @media (max-width: 675.98px) {
   .header {
     margin: 10px 20px;
-  }
-}
-
-.header {
-  display: flex;
-  align-items: start;
-  padding: 30px 0;
-  min-height: 100px;
-}
-
-@media (max-width: 675.98px) {
-  .header {
-    padding: 15px;
+    padding: 15px 10px;
     min-height: 25px;
     display: block;
   }
@@ -73,6 +68,10 @@ a {
     background-color: var(--svg-background);
     border-radius: 6px;
     align-items: center;
+    position: absolute;
+    left: 0;
+    z-index: 100;
+    max-width: 620px;
   }
   .header .showMenu .menu {
     display: block;
@@ -92,7 +91,8 @@ a {
   color: var(--prem-font-color);
   text-transform: capitalize;
 }
-.header .navbar .menu li a:hover {
+.header .navbar .menu li a:hover,
+.header .login:hover {
   color: #232126;
 }
 .header .navbar ul + div {
@@ -100,13 +100,12 @@ a {
 }
 
 @media (max-width: 675.98px) {
-  .header .navbar {
-    z-index: 2;
-  }
   .header .navbar .menu .menuItem {
     color: white;
   }
-
+  .header .navbar .menu li a:hover {
+    color: white;
+  }
   .header .navbar .menu li {
     margin: 0;
     display: block;
@@ -165,9 +164,9 @@ a {
 @media (max-width: 675.98px) {
   .hamburger {
     display: block;
-    position: fixed;
-    top: 1.8rem;
-    right: 1.8em;
+    position: absolute;
+    top: 1rem;
+    right: -0.1rem;
     padding: 4px;
     cursor: pointer;
     width: 45px;
@@ -252,6 +251,10 @@ a {
   padding: 10px 30px;
   font-weight: 700;
   font-size: 0.9rem;
+  transition: 0.3s;
+}
+.hero .content-box a:hover {
+  opacity: 0.7;
 }
 @media (max-width: 575.98px) {
   .hero .content-box {
@@ -265,9 +268,6 @@ a {
     padding: 0px 15px;
     font-size: 0.9rem;
   }
-}
-.hero .content-box a:hover {
-  opacity: 0.7;
 }
 
 .hero .photo-container {
@@ -314,9 +314,84 @@ a {
 }
 
 /* end of hero  */
+/* form */
+form {
+  width: 90%;
+  background-image: url(../images/bg-shorten-desktop.svg);
+  background-color: var(--svg-background);
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+  text-align: center;
+  padding: 35px 0px;
+  border-radius: 6px;
+  margin: 0 auto;
+  top: 65px;
+}
+form .shortening-link {
+  width: 70%;
+  padding: 18px 25px;
+  margin-right: 25px;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+}
+
+form .shortening-link::placeholder {
+  color: var(--secondary-font-color);
+  font-size: 0.9rem;
+}
+form .submit-btn {
+  padding: 18px 40px;
+  background-color: var(--prem-color);
+  color: white;
+  font-size: 1rem;
+  font-weight: 700;
+  transition: 0.3s;
+  border: none;
+  border-radius: 6px;
+}
+form .submit-btn:hover {
+  background-color: #69dddd;
+  cursor: pointer;
+}
+
+@media (max-width: 991.98px) {
+  form {
+    width: 85%;
+  }
+  form .shortening-link {
+    width: 60%;
+    padding: 18px 30px;
+  }
+  form .submit-btn {
+    padding: 18px 30px;
+  }
+}
+@media (max-width: 575.98px) {
+  form {
+    display: flex;
+    flex-direction: column;
+    background-image: url(../images/bg-shorten-mobile.svg);
+    background-position: top right;
+    background-size: 85%;
+  }
+  form .shortening-link {
+    padding: 10px 10px;
+    margin: 0 auto 15px;
+    width: 90%;
+    border-radius: 4px;
+  }
+  form .submit-btn {
+    padding: 10px 0;
+    border-radius: 4px;
+    width: 90%;
+    margin: 0 auto;
+  }
+}
 /* start of feature */
 .feature {
-  height: 200px;
-  background-color: hsl(0, 0%, 75%);
+  height: 100vh;
+  background-color: #eff1f7;
 }
 /* end of feature */
