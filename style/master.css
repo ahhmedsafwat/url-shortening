@@ -468,3 +468,33 @@ a {
   z-index: 1;
 }
 /* end of feature */
+/* start boost */
+.boost {
+  background-image: url(../images/bg-boost-desktop.svg);
+  background-size: cover;
+  background-color: var(--svg-background);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 60px 0;
+}
+
+.boost h2 {
+  color: white;
+  margin-bottom: 20px;
+}
+.boost a {
+  color: white;
+  border-radius: 25px;
+  padding: 10px 35px;
+  background: var(--prem-color);
+  font-weight: 700;
+}
+
+@media (max-width: 575.98px) {
+  .boost {
+    background-image: url(../images/bg-boost-mobile.svg);
+  }
+}
+/* end boost */
