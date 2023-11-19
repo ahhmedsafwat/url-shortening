@@ -208,14 +208,13 @@ a {
   display: flex;
   justify-content: space-between;
   margin-left: 80px;
-  margin-bottom: 50px;
+  margin-bottom: 140px;
   align-items: center;
 }
 @media (max-width: 1199.98px) {
   .hero {
     flex-direction: column-reverse;
     margin-left: 0;
-    margin-bottom: 100px;
   }
 }
 .hero .content-box {
@@ -248,9 +247,9 @@ a {
   color: white;
   background-color: var(--prem-color);
   border-radius: 25px;
-  padding: 10px 30px;
+  padding: 15px 35px;
   font-weight: 700;
-  font-size: 0.9rem;
+  font-size: 0.8rem;
   transition: 0.3s;
 }
 .hero .content-box a:hover {
@@ -314,8 +313,15 @@ a {
 }
 
 /* end of hero  */
+
+/* start of feature */
+.features {
+  padding-bottom: 200px;
+  background-color: #eff1f7;
+  position: relative;
+}
 /* form */
-form {
+.features form {
   width: 90%;
   background-image: url(../images/bg-shorten-desktop.svg);
   background-color: var(--svg-background);
@@ -326,9 +332,9 @@ form {
   padding: 35px 0px;
   border-radius: 6px;
   margin: 0 auto;
-  top: 65px;
+  top: -65px;
 }
-form .shortening-link {
+.features form .shortening-link {
   width: 70%;
   padding: 18px 25px;
   margin-right: 25px;
@@ -337,11 +343,11 @@ form .shortening-link {
   font-size: 1rem;
 }
 
-form .shortening-link::placeholder {
+.features form .shortening-link::placeholder {
   color: var(--secondary-font-color);
   font-size: 0.9rem;
 }
-form .submit-btn {
+.features form .submit-btn {
   padding: 18px 40px;
   background-color: var(--prem-color);
   color: white;
@@ -351,47 +357,114 @@ form .submit-btn {
   border: none;
   border-radius: 6px;
 }
-form .submit-btn:hover {
+.features form .submit-btn:hover {
   background-color: #69dddd;
   cursor: pointer;
 }
 
 @media (max-width: 991.98px) {
-  form {
-    width: 85%;
-  }
-  form .shortening-link {
+  .features form .shortening-link {
     width: 60%;
     padding: 18px 30px;
   }
-  form .submit-btn {
+  .features form .submit-btn {
     padding: 18px 30px;
   }
 }
 @media (max-width: 575.98px) {
-  form {
+  .features form {
     display: flex;
     flex-direction: column;
     background-image: url(../images/bg-shorten-mobile.svg);
     background-position: top right;
     background-size: 85%;
   }
-  form .shortening-link {
-    padding: 10px 10px;
+  .features form .shortening-link {
+    padding: 12px;
     margin: 0 auto 15px;
     width: 90%;
     border-radius: 4px;
   }
-  form .submit-btn {
-    padding: 10px 0;
+  .features form .submit-btn {
+    padding: 12px 0;
     border-radius: 4px;
     width: 90%;
     margin: 0 auto;
   }
 }
-/* start of feature */
-.feature {
-  height: 100vh;
-  background-color: #eff1f7;
+
+.features .shortened-links {
+  width: 90%;
+  margin: 20px auto 0;
+  position: relative;
+  top: -65px;
+  background-color: red;
+  height: 20px;
+}
+.features .features-title h2 {
+  text-align: center;
+  color: #232126;
+  font-size: 2rem;
+}
+.features .features-title p {
+  width: 35%;
+  text-align: center;
+  margin: 10px auto 0;
+  color: var(--prem-font-color);
+}
+.features .features-container {
+  display: flex;
+  margin: 100px 75px 0;
+  justify-content: space-between;
+}
+
+.features .feature {
+  background-color: white;
+  width: 380px;
+  padding: 25px;
+  border-radius: 6px;
+  position: relative;
+  z-index: 2;
+}
+.features .feature:nth-child(2) {
+  top: 43px;
+}
+.features .feature:nth-child(3) {
+  top: 86px;
+}
+.features .feature .img-container {
+  width: 75px;
+  height: 75px;
+  background-color: var(--svg-background);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: -42px;
+}
+.features .feature img {
+  width: 40px;
+  height: 40px;
+}
+.features .feature h3 {
+  color: #232126;
+  margin: 50px 0 10px;
+  text-transform: capitalize;
+}
+.features .feature p {
+  color: var(--prem-font-color);
+  font-size: 0.9rem;
+  line-height: 1.8;
+}
+
+.features .background-line {
+  height: 8px;
+  background-color: var(--prem-color);
+  position: absolute;
+  bottom: 295px;
+  left: 250px;
+  width: 60%;
+  z-index: 1;
 }
 /* end of feature */
