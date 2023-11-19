@@ -498,3 +498,46 @@ a {
   }
 }
 /* end boost */
+/* start footer */
+.footer {
+  background-color: #232126;
+
+  padding: 60px 80px;
+  display: grid;
+  grid-template-columns: 1fr 2fr auto;
+}
+.footer .logo path {
+  fill: white;
+}
+
+.footer .cols-container {
+  display: flex;
+  justify-content: space-evenly;
+  text-transform: capitalize;
+}
+
+.footer .cols-container div h3 {
+  color: white;
+  font-size: 0.9rem;
+  margin-bottom: 23px;
+}
+.footer .cols-container div ul li {
+  font-size: 0.8rem;
+  color: var(--secondary-font-color);
+  margin-bottom: 13px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.footer .social-links a {
+  margin-left: 25px;
+}
+.footer .social-links a path {
+  transition: 0.3s;
+}
+.footer .social-links a:hover path,
+.footer .cols-container div ul li:hover {
+  fill: var(--prem-color);
+  color: var(--prem-color);
+}
+/* end footer */
