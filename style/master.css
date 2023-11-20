@@ -320,6 +320,11 @@ a {
   background-color: #eff1f7;
   position: relative;
 }
+@media (max-width: 1360px) {
+  .features {
+    padding-bottom: 80px;
+  }
+}
 /* form */
 .features form {
   width: 90%;
@@ -422,7 +427,7 @@ a {
   .features .features-container {
     flex-wrap: wrap;
     justify-content: center;
-    margin: 100px 0;
+    margin: 100px 0 0;
   }
 }
 
@@ -539,10 +544,15 @@ a {
 /* start footer */
 .footer {
   background-color: #232126;
-
   padding: 60px 80px;
   display: grid;
-  grid-template-columns: 1fr 2fr auto;
+  grid-template-columns: 1fr 2fr 1fr;
+}
+@media (max-width: 768px) {
+  .footer {
+    grid-template-columns: 1fr;
+    text-align: center; /* You can adjust the text alignment for smaller screens */
+  }
 }
 .footer .logo path {
   fill: white;
@@ -553,7 +563,15 @@ a {
   justify-content: space-evenly;
   text-transform: capitalize;
 }
-
+@media (max-width: 768px) {
+  .footer .cols-container {
+    margin: 20px 0 40px;
+    flex-direction: column;
+  }
+  .footer .cols-container div {
+    margin-top: 20px;
+  }
+}
 .footer .cols-container div h3 {
   color: white;
   font-size: 0.9rem;
@@ -568,8 +586,11 @@ a {
 }
 
 .footer .social-links a {
-  margin-left: 25px;
+  margin: 0 20px;
+
+  justify-self: end;
 }
+
 .footer .social-links a path {
   transition: 0.3s;
 }
