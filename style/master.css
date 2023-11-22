@@ -344,8 +344,38 @@ a {
   padding: 18px 25px;
   margin-right: 25px;
   border: none;
+  outline: none;
   border-radius: 6px;
   font-size: 1rem;
+}
+.features form .noLink {
+  outline: 2px solid hsl(0, 87%, 67%);
+  transition: 0.2s;
+}
+.features form .span-no-link {
+  display: none;
+}
+
+.features form .noLink + .span-no-link {
+  display: block;
+  color: hsl(0, 87%, 67%);
+  font-size: 0.7rem;
+  position: absolute;
+  font-weight: 500;
+  left: 8%;
+  bottom: 12px;
+  font-style: italic;
+}
+@media (max-width: 991.98px) {
+  .features form .noLink + .span-no-link {
+    left: 10%;
+  }
+}
+@media (max-width: 575.98px) {
+  .features form .noLink + .span-no-link {
+    bottom: 85px;
+    left: 5%;
+  }
 }
 
 .features form .shortening-link::placeholder {
@@ -362,7 +392,7 @@ a {
   border: none;
   border-radius: 6px;
 }
-.features form .submit-btn:hover {
+f .features form .submit-btn:hover {
   background-color: #69dddd;
   cursor: pointer;
 }
@@ -390,21 +420,72 @@ a {
     width: 90%;
     border-radius: 4px;
   }
+  .features form .noLink {
+    margin: 0 auto 30px;
+    transition: 0.3s;
+  }
+
   .features form .submit-btn {
     padding: 12px 0;
     border-radius: 4px;
     width: 90%;
     margin: 0 auto;
+    transition: 0.3s;
   }
 }
 
 .features .shortened-links {
   width: 90%;
-  margin: 20px auto 0;
+  margin: 20px auto 50px;
   position: relative;
   top: -65px;
-  background-color: red;
-  height: 20px;
+  height: fit-content;
+}
+.shortened-links .container {
+  display: flex;
+  background-color: white;
+  padding: 15px;
+  align-items: center;
+  border-radius: 6px;
+
+  margin-bottom: 15px;
+}
+
+.shortened-links .container div {
+  font-size: 0.9rem;
+  flex-grow: 1;
+}
+.shortened-links .container div:first-child {
+  color: var(--svg-background);
+  overflow-x: hidden;
+  text-overflow: ellipsis;
+}
+.shortened-links .container div:nth-child(2) {
+  color: var(--prem-color);
+  text-align: center;
+}
+.shortened-links .container span {
+  width: fit-content;
+  cursor: pointer;
+  padding: 8px 20px;
+  background-color: var(--prem-color);
+  border-radius: 6px;
+  color: white;
+  font-size: 0.85rem;
+}
+@media (max-width: 575.98px) {
+  .shortened-links .container {
+    flex-direction: column;
+    margin: 35px 0;
+  }
+  .shortened-links .container div {
+    max-width: 100%;
+    margin-bottom: 15px;
+  }
+  .shortened-links .container span {
+    width: 100%;
+    text-align: center;
+  }
 }
 .features .features-title h2 {
   text-align: center;
@@ -506,7 +587,7 @@ a {
     height: 700px;
     left: 50%;
     transform: translate(-50%, -50%);
-    top: 50%;
+    top: 60%;
   }
 }
 

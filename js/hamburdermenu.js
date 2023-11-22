@@ -1,8 +1,7 @@
-const menu = document.querySelector(".navbar");
 const toggleItem = document.querySelectorAll(".toggleItem");
+const menu = document.querySelector(".navbar");
 const hamburger = document.querySelector(".hamburger");
-
-function toggleMenu() {
+export function toggleMenu() {
   menu.classList.toggle("showMenu");
 
   hamburger.classList.toggle("change");
